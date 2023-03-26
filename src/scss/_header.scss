@@ -1,0 +1,243 @@
+// ========================= [ Header styles ] =========================
+.header {
+    background-color: $grey;
+
+    &.fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.navbar-links {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.button-cart {
+	width: 56px;
+	height: 56px;
+	margin-right: 20px;
+	background-color: $white;
+	border-radius: 50%;
+
+	svg {
+		align-items: center;
+	}
+}
+
+
+.button-gift {
+	@media screen and (max-width: $burgerBreakpoint) {
+		position: absolute;
+		top: 10%;
+		left: 50%;
+		transform: translate(-50%);
+		display: none;
+		&.active {
+			display: block;
+			z-index: 2;
+			animation: fade 0.1s linear;
+	}
+	}
+}
+
+// ========================== [ Menu styles ] ==========================
+.menu {
+    display: flex;
+    gap: 30px;
+
+    // .menu__item
+    &__item {
+        display: flex;
+        position: relative;
+    }
+
+    // .menu__item-link
+    &__item-link {
+        color: $mainColor;
+				font-weight: 500;
+        font-size: 15px;
+        line-height: 1.46;
+        display: flex;
+        position: relative;
+        transition: 0.5s color;
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: -3px;
+            background: $darkGrey;
+            height: 1px;
+            width: 100%;
+            transform: scale(0);
+            transition: 0.5s transform;
+
+            // Comment if you need border animation
+            // display: none;
+        }
+        &:hover {
+            color: $darkGrey;
+            &:after {
+                transform: scale(1);
+            }
+        }
+    }
+
+    // Mobile menu styles
+    @media screen and (max-width: $burgerBreakpoint) {
+        position: fixed;
+        background: $grey;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        display: none;
+
+        &.active {
+            display: flex;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+            pointer-events: all;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            animation: fade 0.1s linear;
+        }
+    }
+}
+
+// ========================= [ Burger styles ] =========================
+.burger {
+    display: none;
+    background: transparent;
+    z-index: 3;
+    @media screen and (max-width: $burgerBreakpoint) {
+        display: flex;
+        position: relative;
+        height: 20px;
+        width: 30px;
+
+        &.active {
+            &:before {
+                background: $burgerActiveColor;
+                transform: rotate(45deg);
+                transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+                top: 8px;
+            }
+
+            &:after {
+                background: $burgerActiveColor;
+                transform: rotate(-45deg);
+                bottom: 10px;
+                transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+            }
+
+            & span {
+                transform: scale(0);
+            }
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: $burgerColor;
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        span {
+            position: absolute;
+            top: 9px;
+            right: 0;
+            width: 100%;
+            background: $burgerColor;
+            height: 2px;
+            transform: scale(1);
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+        }
+    }
+}
+
+// ==================== [Hero Section] ===================
+.hero {
+	background-color: $grey;
+}
+.hero-items {
+	padding-top: 123px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.hero-description {
+	max-width: 600px;
+
+	h1 {
+	display: block;
+	margin-bottom: 30px;
+	position: relative;
+	font-weight: 800;
+  font-size: 124px;
+  line-height: 1.13;
+
+	  &::after {
+	  	position: absolute;
+		  content: '';
+		  right: 101px;
+		  bottom: 30px;
+		  background-image: url(../img/badge.png);
+		  width: 73px;
+			height: 58px;
+		  
+		}
+	}
+
+	p {
+  font-size: 24px;
+  line-height: 1.45;
+  color: $darkGrey;
+	}
+
+}
+
+.hero-button {
+	margin-top: 60px;
+}
+
+.button-app {
+	margin-right: 30px;
+	padding: 20px 40px;
+	font-size: 18px;
+  line-height: 1.67;
+}
+
+.shop-link {
+	font-weight: 500;
+  font-size: 18px;
+  line-height: 1.73;
+  text-transform: uppercase;
+  color: $mainColor;
+	border-bottom: 1px solid $mainColor;
+}

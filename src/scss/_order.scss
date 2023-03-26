@@ -1,0 +1,29 @@
+.order {
+	max-width: 1340px;
+	display: flex;
+	gap: 21px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.order-description {
+	max-width: 512px;
+	margin-right: 20px;
+	display: flex;
+	flex-direction:column;
+	align-self: center;
+}
+
+.title {
+	margin-bottom: 30px;
+}
+
+.order-button {
+	margin-top: 60px;
+}
+
+.button-order {
+	padding: 20px 40px;
+  font-size: 18px;
+  line-height: 1.67;
+ }

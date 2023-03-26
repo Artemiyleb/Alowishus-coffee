@@ -1,0 +1,71 @@
+// Container
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakpoint1450) {
+        max-width: 1200px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+// Body & Locked
+body {
+    font-family: $fontMain;
+		font-weight: 400;
+    &.locked {
+        overflow: hidden;
+    }
+    // Dark mode styles
+    &.dark {
+        background: #242424;
+    }
+}
+
+.main__body {
+	background: linear-gradient(173.34deg, #FFFFFF 0%, #FFFFFF 0%, rgba(243, 244, 245, 0.2) 11.74%, #F3F4F5 27.92%, rgba(243, 244, 245, 0) 44.79%, rgba(243, 244, 245, 0.68) 60.42%, #F3F4F5 79.17%, #f0f0f0 100%);
+}
+
+.title {
+	font-weight: 800;
+  font-size: 64px;
+  line-height: 1.09;
+  color: $mainColor;
+}
+
+.sub-title {
+	font-size: 24px;
+  line-height: 1.45;
+  color: $darkGrey;
+}
+
+.icon { 
+  width: 30px; 
+  height: 30px;
+}
+
+// Animations
+// Fade
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+

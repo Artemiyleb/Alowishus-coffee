@@ -1,0 +1,135 @@
+.customers {
+	padding-bottom: 100px;
+	}
+.customers-items {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+// Slide Card
+
+.slide-card {
+	max-width: 468px;
+	background: linear-gradient(142.42deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  filter: drop-shadow(0px 20px 60px rgba(163, 168, 179, 0.15));
+  border-radius: 16px;
+	margin-right: 35px;
+}
+
+.slide-card__img {
+	img {
+	border-radius: 16px 16px 0 0;
+	}
+}
+
+.slide-card__description {
+  padding: 40px;
+}
+
+.slide-card__name {
+	margin-bottom: 32px;
+ 
+	span {
+		display: block;
+		position: relative;
+		font-weight: 600;
+    font-size: 24px;
+    line-height: 1.25;
+    color: $mainColor;
+
+		&::after {
+			position: absolute;
+		  content: '';
+		  right: 0;
+		  top: 0;;
+		  background-image: url(../img/stars.svg);
+		  width: 120px;
+			height: 24px;
+		}
+	}
+
+
+}
+.slide-card__text {
+
+	p {
+		font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: $mainColor;
+	}
+}
+
+.swiper {
+	margin-left: -180px;
+}
+
+.customers-description {
+	min-width: 454px;
+  margin: 0 100px;
+
+	p {
+    margin-top: 8px;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $darkGrey;
+	}
+}
+
+.customers-description__items {
+	display: flex;
+	margin-top: 40px;
+	gap: 24px;
+}
+
+.customers-description__number {
+	align-self: center;
+	span {
+		font-weight: 600;
+		font-size: 40px;
+		line-height: 1;
+		color: $mainColor;
+	}
+}
+
+.swiper-prev {
+	right: 494px;
+	background: url(../img/arrow.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.swiper-next {
+	right: 410px;
+	background: url(../img/arrow-right.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+} 
+
+.swiper-arrow {
+	position: absolute;
+	top: 50%;
+	width: 60px;
+	height: 60px;
+	z-index: 100000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #FFFFFF;
+	border-radius: 50%;
+}
+
+.bg__cup {
+	position: absolute;
+	top: -400px;
+	left: 0;
+	}
+
+.bg__right-cup {
+	position: absolute;
+	bottom: -300px;
+	right: 0;
+}

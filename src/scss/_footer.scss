@@ -1,0 +1,169 @@
+// Footer
+
+.footer {
+padding-top: 110px;
+}
+
+.footer-items {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-logo {
+	max-width: 560px;
+	margin: 0;
+
+	img {
+		margin-bottom: 40px;
+	}
+
+	p {
+		font-size: 30px;
+    line-height: 1.33;
+    color: $darkGrey;
+	}
+}
+.footer-contacts {
+	margin: 0 0 90px 0;
+}
+.footer-header {
+	font-weight: 800;
+  font-size: 40px;
+  line-height: 1.25;
+  color: $mainColor;
+	margin-bottom: 30px;
+}
+.footer-contacts__email {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	margin-bottom: 30px;
+
+	p {
+		font-size: 30px;
+    line-height: 1.64;
+    color: $darkGrey;
+	}
+}
+
+.icons {
+	display: flex;
+	width: 60px;
+	height: 60px;
+	background-color: #fff;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+}
+.footer-contacts__tel {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	margin-bottom: 30px;
+	
+	p {
+		font-size: 30px;
+    line-height: 1.64;
+    color: $darkGrey;
+	}
+}
+
+.footer-contacts__social {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+
+.footer-locations {
+	max-width: 560px;
+
+	p {
+		font-size: 30px;
+		line-height: 1.33;
+		color: $darkGrey;
+		margin-bottom: 30px;
+	}
+
+	a {
+		position: relative;
+		font-weight: 600;
+    font-size: 18px;
+    line-height: 1.67;
+    text-transform: uppercase;
+    color: $mainColor;
+	}
+
+	a::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -34px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/arrow-right-footer.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+	}
+}
+
+.mail-field__input {
+	border-radius: 65px;
+  padding: 20px 30px;
+
+	&::placeholder {
+		font-size: 22px;
+    line-height: 1.36;
+    color: $darkGrey;
+    opacity: 0.7;
+	}
+}
+
+.form-button {
+	margin-top: 30px;
+}
+
+.button-form {
+	padding: 20px 40px;
+	background-color: $mainColor;
+	border-radius: 126px;
+	font-weight: 500;
+  font-size: 18px;
+  line-height: 1.67;
+  text-transform: uppercase;
+	color: #fff;
+
+}
+
+.footer-subscribe {
+	margin-bottom: 70px;
+}
+
+.footer-bottom {
+	border-top: 1px solid rgba($color: $mainColor, $alpha: 0.1);
+	display: flex;
+	justify-content: space-between;
+	padding: 40px 0;
+}
+
+.footer-copyrights {
+
+	p {
+		font-size: 22px;
+    line-height: 1.36;
+    color: $darkGrey;
+		span {
+			font-weight: 500;
+      color: $mainColor;
+		}
+	}
+}
+
+.footer-terms {
+display: flex;
+	a,
+	p {
+		font-size: 22px;
+    line-height: 1.36;
+    color: $darkGrey;
+	}
+}

@@ -1,0 +1,21 @@
+// Libs
+@import './libs/swiper';
+
+// Global SCSS-files imports
+@import './vars';
+@import './reset';
+@import './global';
+@import './normalize';
+
+// Sections or Pages SCSS-files imports
+@import './button';
+@import './header';
+@import './catalog';
+@import './order';
+@import './bestselling';
+@import './app';
+@import './customers';
+@import './home';
+@import './footer';
+
+

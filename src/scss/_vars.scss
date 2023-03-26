@@ -1,0 +1,27 @@
+// Container & Breakpoints
+@use 'sass:math';
+$containerWidth: 1240;
+$containerPadding: 40;
+$containerSidePadding: math.div($containerPadding, 2);
+$breakpoint1450: 1449.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint480: 479.98 + px;
+
+// Colors
+$mainColor: #1B1B1D;
+$white: #FFFFFF;
+$darkGrey: #64646A;
+$grey: #EEEFF1;
+$lightGrey: #F3F4F5;
+$yellow: #FFB700;
+
+
+// Burger Menu
+$burgerBreakpoint: $breakpoint992;
+$burgerColor: $mainColor;
+$burgerActiveColor: $mainColor;
+
+// Fonts
+$fontMain: 'Jost', sans-serif;
+$fontSecondary: '';
