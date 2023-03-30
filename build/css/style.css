@@ -1491,7 +1491,7 @@ template {
 }
 
 .hero-description h1 {
-  display: block;
+  position: relative;
   margin-bottom: 30px;
   position: relative;
   font-weight: 800;
@@ -2194,6 +2194,32 @@ template {
   }
 }
 
+@media screen and (max-width: 1400px) {
+  .hero {
+    padding-bottom: 84px;
+  }
+
+  .hero-items {
+    padding-top: 74px;
+  }
+
+  .hero-description h1 {
+    font-size: 80px;
+  }
+
+  .hero-description h1::after {
+    background-size: cover;
+    width: 47px;
+    height: 37px;
+    left: 270px;
+    bottom: 19px;
+  }
+
+  .hero-img img {
+    max-width: 500px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .container {
     max-width: 970px;
@@ -2201,9 +2227,14 @@ template {
 }
 
 @media screen and (max-width: 991.98px) {
+  .button-cart {
+    display: none;
+  }
+
   .button-gift {
     position: absolute;
-    top: 10%;
+    width: 80%;
+    bottom: 20%;
     left: 50%;
     -webkit-transform: translate(-50%);
         -ms-transform: translate(-50%);
@@ -2216,6 +2247,10 @@ template {
     z-index: 2;
     -webkit-animation: fade 0.1s linear;
             animation: fade 0.1s linear;
+  }
+
+  .menu__item-link {
+    font-size: 24px;
   }
 
   .menu {
@@ -2323,6 +2358,54 @@ template {
     -o-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
     transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
   }
+
+  .hero {
+    padding-bottom: 56px;
+  }
+
+  .hero-items {
+    padding-top: 50px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
+  .hero-description h1 {
+    margin-top: 0;
+    font-size: 54px;
+  }
+
+  .hero-description h1::after {
+    display: none;
+  }
+
+  .hero-description p {
+    font-size: 20px;
+  }
+
+  .hero-img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-img img {
+    max-width: 400px;
+  }
+
+  .hero-button {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .button-app {
+    padding: 16px 20px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -2334,5 +2417,33 @@ template {
 @media (max-width: 479.98px) {
   .container {
     max-width: none;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 479.98px) {
+  .hero-img img {
+    max-width: 280px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .button-app {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    margin: 0 0 20px 0;
   }
 }

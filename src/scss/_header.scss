@@ -30,6 +30,10 @@
 	background-color: $white;
 	border-radius: 50%;
 
+	@media screen and (max-width: $burgerBreakpoint) {
+	  display: none;
+	}
+
 	svg {
 		align-items: center;
 		transition: all ease 0.3s;
@@ -46,7 +50,8 @@
 .button-gift {
 	@media screen and (max-width: $burgerBreakpoint) {
 		position: absolute;
-		top: 10%;
+		width: 80%;
+		bottom: 20%;
 		left: 50%;
 		transform: translate(-50%);
 		display: none;
@@ -78,6 +83,11 @@
         display: flex;
         position: relative;
         transition: 0.5s color;
+
+				@media screen and (max-width: $burgerBreakpoint) {
+          font-size: 24px;
+				}
+
         &:after {
             position: absolute;
             content: '';
@@ -192,46 +202,128 @@
 .hero {
 	background-color: $grey;
 	padding-bottom: 130px;
+
+	@media screen and (max-width: 1400px) {
+		padding-bottom: 84px;
+	}
+	@media screen and (max-width: $burgerBreakpoint) {
+		padding-bottom: 56px;
+			}
 }
 .hero-items {
 	padding-top: 123px;
 	display: flex;
 	justify-content: space-between;
+
+	@media screen and (max-width: 1400px) {
+		padding-top: 74px;
+	}
+
+	@media screen and (max-width: $burgerBreakpoint) {
+		padding-top: 50px;
+		flex-wrap: wrap;
+			}
 }
 
 .hero-description {
 	max-width: 600px;
-
+	@media screen and (max-width: $burgerBreakpoint) {
+		max-width: 100%;
+		flex: 0 1 100%;
+			}
 	h1 {
-	display: block;
+	position: relative;
 	margin-bottom: 30px;
 	position: relative;
 	font-weight: 800;
   font-size: 124px;
   line-height: 1.13;
 
-	  &::after {
-	  	position: absolute;
-		  content: '';
-		  right: 101px;
-		  bottom: 30px;
-		  background-image: url(../img/badge.png);
-		  width: 73px;
-			height: 58px;
-		  
-		}
+	@media screen and (max-width: 1400px) {
+		font-size: 80px;
 	}
+
+	@media screen and (max-width: $burgerBreakpoint) {
+		margin-top: 0;
+		font-size: 54px;
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		right: 101px;
+		bottom: 30px;
+		background-image: url(../img/badge.png);
+		width: 73px;
+		height: 58px;
+		
+		@media screen and (max-width: 1400px) {
+			background-size: cover;
+			width: 47px;
+			height: 37px;
+			left: 270px;
+			bottom: 19px;
+		}
+
+		@media screen and (max-width: $burgerBreakpoint) {
+			display: none;
+		}
+
+	}
+	 	}
 
 	p {
   font-size: 24px;
   line-height: 1.45;
   color: $darkGrey;
+
+	@media screen and (max-width: $burgerBreakpoint) {
+		font-size: 20px;
 	}
+
+	}
+}
+
+.hero-img {
+
+	@media screen and (max-width: $burgerBreakpoint) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img {
+
+	@media screen and (max-width: 1400px) {
+		max-width: 500px;
+	}
+
+	@media screen and (max-width: $burgerBreakpoint) {
+		max-width: 400px;
+	}
+
+	@media screen and (max-width: $breakpoint480) {
+		max-width: 280px;
+	}
+
+}
 
 }
 
 .hero-button {
 	margin-top: 60px;
+
+	@media screen and (max-width: $burgerBreakpoint) {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+
+	@media screen and (max-width: 400px) {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
 }
 
 .button-app {
@@ -239,6 +331,16 @@
 	padding: 20px 40px;
 	font-size: 18px;
   line-height: 1.67;
+
+	@media screen and (max-width: $burgerBreakpoint) {
+		padding: 16px 20px;
+	}
+
+	@media screen and (max-width: 400px) {
+		flex: 0 1 100%;
+		margin: 0 0 20px 0;
+	}
+
 }
 
 .shop-link {
@@ -249,6 +351,10 @@
   color: $mainColor;
 	border-bottom: 1px solid $mainColor;
 	transition: all ease 0.3s;
+
+	@media screen and (max-width: 400px) {
+	
+			}
 
 	&:hover {
 		color: $darkGrey;
