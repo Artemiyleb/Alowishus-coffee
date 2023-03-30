@@ -32,6 +32,13 @@
 
 	svg {
 		align-items: center;
+		transition: all ease 0.3s;
+		
+      &:hover {
+				path {
+				fill: $darkGrey;
+				}
+			}
 	}
 }
 
@@ -184,6 +191,7 @@
 // ==================== [Hero Section] ===================
 .hero {
 	background-color: $grey;
+	padding-bottom: 130px;
 }
 .hero-items {
 	padding-top: 123px;
@@ -240,4 +248,9 @@
   text-transform: uppercase;
   color: $mainColor;
 	border-bottom: 1px solid $mainColor;
+	transition: all ease 0.3s;
+
+	&:hover {
+		color: $darkGrey;
+	}
 }

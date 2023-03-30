@@ -91,6 +91,10 @@ padding-top: 110px;
     line-height: 1.67;
     text-transform: uppercase;
     color: $mainColor;
+
+		&:hover {
+			color: $darkGrey;
+		}
 	}
 
 	a::after {
@@ -165,5 +169,19 @@ display: flex;
 		font-size: 22px;
     line-height: 1.36;
     color: $darkGrey;
+		transition: all ease 0.3s;
+	}
+	a:hover {
+		color: $mainColor;
 	}
 }
+
+.icon {
+  fill: $darkGrey;
+  transition: all ease 0.3s;
+	
+    &:hover {
+	  fill: $mainColor;
+}
+}
+

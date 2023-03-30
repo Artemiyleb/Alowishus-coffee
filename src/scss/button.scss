@@ -8,4 +8,9 @@
   border-radius: 63px;
   padding: 15px 30px;
   color: $white;
+	transition: all ease 0.3s;
+}
+
+.button:hover{
+ background-color: $darkGrey;
 }

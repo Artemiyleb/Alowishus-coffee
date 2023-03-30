@@ -1344,6 +1344,13 @@ template {
   border-radius: 63px;
   padding: 15px 30px;
   color: #FFFFFF;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.button:hover {
+  background-color: #64646A;
 }
 
 .header {
@@ -1393,6 +1400,13 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.button-cart svg:hover path {
+  fill: #64646A;
 }
 
 .menu {
@@ -1459,6 +1473,7 @@ template {
 
 .hero {
   background-color: #EEEFF1;
+  padding-bottom: 130px;
 }
 
 .hero-items {
@@ -1518,6 +1533,13 @@ template {
   text-transform: uppercase;
   color: #1B1B1D;
   border-bottom: 1px solid #1B1B1D;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.shop-link:hover {
+  color: #64646A;
 }
 
 .catalog {
@@ -1760,6 +1782,11 @@ template {
   top: 100px;
   left: 145px;
   z-index: 2;
+}
+
+.button-order {
+  position: relative;
+  z-index: 11;
 }
 
 .customers {
@@ -2027,6 +2054,10 @@ template {
   color: #1B1B1D;
 }
 
+.footer-locations a:hover {
+  color: #64646A;
+}
+
 .footer-locations a::after {
   content: "";
   position: absolute;
@@ -2131,6 +2162,24 @@ template {
   font-size: 22px;
   line-height: 1.36;
   color: #64646A;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.footer-terms a:hover {
+  color: #1B1B1D;
+}
+
+.icon {
+  fill: #64646A;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.icon:hover {
+  fill: #1B1B1D;
 }
 
 @media (max-width: 1449.98px) {
