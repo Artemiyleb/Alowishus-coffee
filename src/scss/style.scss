@@ -3,12 +3,14 @@
 
 // Global SCSS-files imports
 @import './vars';
+@import './mixin';
 @import './reset';
 @import './global';
 @import './normalize';
 
+
 // Sections or Pages SCSS-files imports
-@import './button';
+@import './_button';
 @import './header';
 @import './catalog';
 @import './order';
