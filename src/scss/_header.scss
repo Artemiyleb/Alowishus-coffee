@@ -201,26 +201,14 @@
 // ==================== [Hero Section] ===================
 .hero {
 	background-color: $grey;
-	padding-bottom: 130px;
-
-	@media screen and (max-width: 1400px) {
-		padding-bottom: 84px;
-	}
-	@media screen and (max-width: $burgerBreakpoint) {
-		padding-bottom: 56px;
-			}
+	@include adaptiveValue("padding-bottom", 130, 20);
 }
 .hero-items {
-	padding-top: 123px;
 	display: flex;
 	justify-content: space-between;
-
-	@media screen and (max-width: 1400px) {
-		padding-top: 74px;
-	}
+	@include adaptiveValue("padding-top", 123, 20);
 
 	@media screen and (max-width: $burgerBreakpoint) {
-		padding-top: 50px;
 		flex-wrap: wrap;
 			}
 }
@@ -246,6 +234,11 @@
 	@media screen and (max-width: $burgerBreakpoint) {
 		margin-top: 0;
 		font-size: 54px;
+	}
+
+	@media screen and (max-width: $breakpoint480) {
+		text-align: center;
+			font-size: 44px;
 	}
 
 	&::after {
@@ -276,9 +269,10 @@
   font-size: 24px;
   line-height: 1.45;
   color: $darkGrey;
+	@include adaptiveValue("font-size", 24, 18);
 
-	@media screen and (max-width: $burgerBreakpoint) {
-		font-size: 20px;
+	@media screen and (max-width: $breakpoint480) {
+		text-align: center;
 	}
 
 	}

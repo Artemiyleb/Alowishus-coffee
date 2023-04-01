@@ -887,7 +887,7 @@ h6 {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1320px;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
@@ -915,7 +915,9 @@ body.dark {
   font-weight: 800;
   font-size: 64px;
   line-height: 1.09;
+  margin-bottom: 30px;
   color: #1B1B1D;
+  font-size: calc(30px + 34 * ((100vw - 320px) / 1120));
 }
 
 .sub-title {
@@ -1473,17 +1475,39 @@ template {
 
 .hero {
   background-color: #EEEFF1;
-  padding-bottom: 130px;
+}
+
+@supports (padding-bottom: clamp( 1.25rem , -1.0416666667rem  +  11.4583333333vw , 8.125rem )) {
+  .hero {
+    padding-bottom: clamp( 1.25rem , -1.0416666667rem  +  11.4583333333vw , 8.125rem );
+  }
+}
+
+@supports not (padding-bottom: clamp( 1.25rem , -1.0416666667rem  +  11.4583333333vw , 8.125rem )) {
+  .hero {
+    padding-bottom: calc(1.25rem + 6.875 * (100vw - 20rem) / 60);
+  }
 }
 
 .hero-items {
-  padding-top: 123px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@supports (padding-top: clamp( 1.25rem , -0.8958333333rem  +  10.7291666667vw , 7.6875rem )) {
+  .hero-items {
+    padding-top: clamp( 1.25rem , -0.8958333333rem  +  10.7291666667vw , 7.6875rem );
+  }
+}
+
+@supports not (padding-top: clamp( 1.25rem , -0.8958333333rem  +  10.7291666667vw , 7.6875rem )) {
+  .hero-items {
+    padding-top: calc(1.25rem + 6.4375 * (100vw - 20rem) / 60);
+  }
 }
 
 .hero-description {
@@ -1515,6 +1539,18 @@ template {
   color: #64646A;
 }
 
+@supports (font-size: clamp( 1.125rem , 1rem  +  0.625vw , 1.5rem )) {
+  .hero-description p {
+    font-size: clamp( 1.125rem , 1rem  +  0.625vw , 1.5rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.125rem , 1rem  +  0.625vw , 1.5rem )) {
+  .hero-description p {
+    font-size: calc(1.125rem + 0.375 * (100vw - 20rem) / 60);
+  }
+}
+
 .hero-button {
   margin-top: 60px;
 }
@@ -1544,12 +1580,25 @@ template {
 
 .catalog {
   position: relative;
-  padding-top: 150px;
   padding-bottom: 190px;
+}
+
+@supports (padding-top: clamp( 0.625rem , -2.2916666667rem  +  14.5833333333vw , 9.375rem )) {
+  .catalog {
+    padding-top: clamp( 0.625rem , -2.2916666667rem  +  14.5833333333vw , 9.375rem );
+  }
+}
+
+@supports not (padding-top: clamp( 0.625rem , -2.2916666667rem  +  14.5833333333vw , 9.375rem )) {
+  .catalog {
+    padding-top: calc(0.625rem + 8.75 * (100vw - 20rem) / 60);
+  }
 }
 
 .catalog-header {
   text-align: center;
+  position: relative;
+  z-index: 11;
 }
 
 .catalog-header p {
@@ -1575,6 +1624,7 @@ template {
 }
 
 .catalog-item {
+  max-width: 390px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1592,6 +1642,16 @@ template {
           filter: drop-shadow(0px 30px 60px rgba(163, 168, 179, 0.15));
   border-radius: 24px;
   padding: 40px;
+}
+
+.catalog-item__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .catalog-item__title h3 {
@@ -1614,7 +1674,7 @@ template {
 }
 
 .order {
-  max-width: 1340px;
+  max-width: 1350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1625,20 +1685,6 @@ template {
 
 .order-description {
   max-width: 512px;
-  margin-right: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-
-.title {
-  margin-bottom: 30px;
 }
 
 .order-button {
@@ -2195,14 +2241,6 @@ template {
 }
 
 @media screen and (max-width: 1400px) {
-  .hero {
-    padding-bottom: 84px;
-  }
-
-  .hero-items {
-    padding-top: 74px;
-  }
-
   .hero-description h1 {
     font-size: 80px;
   }
@@ -2220,9 +2258,96 @@ template {
   }
 }
 
+@media (max-width: 1200px) {
+  .button {
+    padding: 12px 24px;
+  }
+
+  .catalog-img {
+    width: 300px;
+    height: auto;
+  }
+
+  .catalog-items {
+    gap: 20px;
+  }
+
+  .catalog-item__title h3 {
+    font-size: 28px;
+  }
+
+  .catalog-item__title p {
+    font-size: 20px;
+  }
+
+  .button-catalog {
+    font-size: 16px;
+  }
+
+  .order-img img {
+    width: 600px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 991.98px) {
+  .catalog-items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 479.98px) {
+  .catalog-items {
+    gap: 10px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .container {
     max-width: 970px;
+  }
+
+  .catalog-header p {
+    max-width: 400px;
+    margin: 18px auto 60px auto;
+  }
+
+  .catalog-img {
+    width: 200px;
+  }
+
+  .order {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .order-img img {
+    width: 100%;
+  }
+
+  .order-description {
+    width: 100%;
+  }
+
+  .order-description .title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .order-description p {
+    text-align: center;
+  }
+
+  .order-button {
+    margin-top: 40px;
+    text-align: center;
   }
 }
 
@@ -2359,12 +2484,7 @@ template {
     transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
   }
 
-  .hero {
-    padding-bottom: 56px;
-  }
-
   .hero-items {
-    padding-top: 50px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -2383,10 +2503,6 @@ template {
 
   .hero-description h1::after {
     display: none;
-  }
-
-  .hero-description p {
-    font-size: 20px;
   }
 
   .hero-img {
@@ -2412,6 +2528,10 @@ template {
   .container {
     max-width: 740px;
   }
+
+  .order-description {
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 479.98px) {
@@ -2419,9 +2539,41 @@ template {
     max-width: none;
     padding: 0 10px;
   }
+
+  .catalog-header p {
+    margin: 18px auto 20px auto;
+  }
+
+  .catalog-img {
+    display: none;
+  }
+
+  .catalog-item {
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .catalog-item__title {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .catalog-item__title p {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 479.98px) {
+  .hero-description h1 {
+    text-align: center;
+    font-size: 44px;
+  }
+
+  .hero-description p {
+    text-align: center;
+  }
+
   .hero-img img {
     max-width: 280px;
   }
