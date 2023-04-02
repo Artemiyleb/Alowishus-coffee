@@ -1,40 +1,52 @@
 .app {
 	position: relative;
 	padding-bottom: 88px;
+
+	@media screen and (max-width: $breakpoint480) {
+    padding-bottom: 28px;
+	}
 }
 
 .left-cup {
 position: absolute;
 top: -70px;
 left: 0;
+
+  @media screen and (max-width: $maxWidth + px) {
+	  display: none;
+  }
 }
 
 .app-items {
 	display: flex;
-	}
+	gap: 20px;
 
-.app-description {
-	max-width: 512px;
-	align-self: center;
+	@media screen and (max-width: $burgerBreakpoint) {
+    flex-wrap: wrap;
+		gap: 40px;
+	}
 }
 
-.app-image {
-	position: relative;
+.app-description {
+	max-width: 495px;
+	align-self: center;
+	
+	  @media screen and (max-width: $burgerBreakpoint) {
+			display: flex;
+			flex-direction: column;
+      text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+	}
 }
 
 .app-image__cards {
-	position: relative;
-	z-index: 3;
-}
-
-.app-image__ellipse {
-	position: absolute;
-	top: 100px;
-	left: 145px;
-	z-index: 2;
+	max-width: 100%;
+	height: auto;
 }
 
 .button-order {
 position: relative;
-z-index: 11;
+z-index: 2;
+@include adaptiv-font(18, 15);
 	}

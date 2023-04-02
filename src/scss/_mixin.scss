@@ -1,4 +1,5 @@
 @use 'sass:math';
+
 @mixin adaptiv-font($pcSize, $mobSize) {
  $addSize: $pcSize - $mobSize;
  $maxWidth: $maxWidth - 320;

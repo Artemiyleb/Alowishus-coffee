@@ -2,12 +2,21 @@
 	position: relative;
 	padding-top: 170px;
 	padding-bottom: 130px;
+
+	  @media screen and (max-width: $breakpointContainer) {
+	    @include adaptiveValue("padding-top", 170, 40);
+	    @include adaptiveValue("padding-bottom", 130, 40);
+	  }
 }
 
 .bestselling-bgimg {
-position: absolute;
-top: 0;
-right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+    @media screen and (max-width: $breakpoint768) {
+	    display: none;
+    }
 }
 
 .bestselling-header {
@@ -16,6 +25,10 @@ right: 0;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 178px;
+
+	  @media screen and (max-width: $breakpointContainer) {
+      @include adaptiveValue("margin-bottom", 178, 80);
+	  }
 }
 
 .bestselling-items {
@@ -23,9 +36,10 @@ right: 0;
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 30px;
-	@media screen and (max-width: $breakpoint1450) {
-		gap: 90px;
-	}
+
+	  @media screen and (max-width: $breakpoint1450) {
+		  gap: 90px;
+	  }
 }
 
 .bestselling-item {
@@ -34,13 +48,27 @@ right: 0;
 	background: linear-gradient(142.42deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
   filter: drop-shadow(0px 20px 60px rgba(163, 168, 179, 0.15));
   border-radius: 24px;
-  padding: 41px 30px 35px 30px;
+	padding: 41px 30px 35px 30px;
+
+	  @media screen and (max-width: $breakpointContainer) {
+		  @include adaptiveValue("max-width", 393, 262);
+      @include adaptiveValue("padding-top", 41, 10);
+	    @include adaptiveValue("padding-right", 30, 10);
+	    @include adaptiveValue("padding-bottom", 35, 10);
+	    @include adaptiveValue("padding-left", 30, 10);
+	  }
 }
 
 .bestselling-item__img {
 	position: absolute;
 	top: -74px;
 	left: 0;
+	@include adaptiveValue("max-width", 206, 100);
+
+	  img {
+	    width: 100%;
+	    height: auto;
+	}
 }
 
 .bestselling-item__title {
@@ -48,18 +76,22 @@ right: 0;
 	margin-left: 190px;
 	margin-bottom: 87px;
 
+	  @media screen and (max-width: $breakpointContainer) {
+		  @include adaptiveValue("margin-left", 190, 90);
+		  @include adaptiveValue("margin-bottom", 87, 40);
+	}
+
 	p {
 		font-weight: 500;
-    font-size: 20px;
     line-height: 1.4;
     color: $darkGrey;
 		margin-bottom: 8px;
+		@include adaptiv-font(20, 18);
 	}
-
 	h3 {
 		font-weight: 600;
-    font-size: 40px;
-    line-height: 1.1;
+    @include adaptiv-font(40, 28);
+		line-height: 1.1;
     color: $mainColor;
 	}
 }
@@ -68,22 +100,33 @@ right: 0;
 	max-width: 333px;
 	margin-bottom: 40px;
 
+	@media screen and (max-width: $breakpointContainer) {
+		@include adaptiveValue("margin-bottom", 40, 20);
+		}
+
 	p {
-		font-size: 20px;
-    line-height: 1.4;
+		line-height: 1.4;
     color: $darkGrey;
+		@include adaptiv-font(20, 18);
 	}
 }
 
 .bestselling-item__order {
-	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	span {
 		font-weight: 500;
     font-size: 30px;
     line-height: 0.93;
     color: $mainColor;
 		margin-right: 63px;
-	}
+		@include adaptiv-font(30, 24);
+
+		  @media screen and (max-width: $breakpointContainer) {
+		    @include adaptiveValue("margin-right", 63, 16);
+		    }
+	    }
 }
 
 .button-bestselling {

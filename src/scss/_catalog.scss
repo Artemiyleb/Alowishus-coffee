@@ -1,7 +1,7 @@
 .catalog {
 	position: relative;
-	padding-bottom: 190px;
-	@include adaptiveValue("padding-top", 150 , 10);
+	@include adaptiveValue("padding-top", 150 , 20);
+	@include adaptiveValue("padding-bottom", 190 , 20);
 
 
 //	  @media (max-width: 1200px) {
@@ -29,7 +29,7 @@
 .catalog-header {
   text-align: center;
 	position: relative;
-	z-index: 11;;
+	z-index: 1;
 
 	p {
 		display: block;
