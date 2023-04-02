@@ -5,9 +5,28 @@
 	position: relative;
 	display: flex;
 	justify-content: space-between;
+
+	@media screen and (max-width: $breakpoint1420) {
+		flex-wrap: wrap-reverse;
+		gap: 80px;
+		padding-bottom: 40px;
+	}
+
+	@media screen and (max-width: $breakpoint480) {
+		flex-wrap: wrap-reverse;
+		gap: 80px;
+		padding-bottom: 20px;
+	}
 }
 
 // Slide Card
+
+.swiper-slide {
+	@media screen and (max-width: 479px) {
+		max-width: 460px;
+		margin-left: 5px;
+	}
+}
 
 .slide-card {
 	max-width: 468px;
@@ -20,6 +39,7 @@
 .slide-card__img {
 	img {
 	border-radius: 16px 16px 0 0;
+	max-width: 100%;
 	}
 }
 
@@ -29,6 +49,10 @@
 
 .slide-card__name {
 	margin-bottom: 32px;
+
+	  @media screen and (max-width: 660px) {
+		  margin-bottom: 60px;
+	}
  
 	span {
 		display: block;
@@ -42,10 +66,15 @@
 			position: absolute;
 		  content: '';
 		  right: 0;
-		  top: 0;;
+		  top: 0;
 		  background-image: url(../img/stars.svg);
 		  width: 120px;
 			height: 24px;
+			@media screen and (max-width: 660px) {
+				left: 0;
+				top: 40px;
+			}
+
 		}
 	}
 
@@ -63,13 +92,26 @@
 
 .swiper {
 	margin-left: -180px;
+
+	@media screen and (max-width: 479px) {
+	margin-left: 0;
+}
 }
 
 .customers-description {
 	min-width: 454px;
   margin: 0 100px;
 
-	p {
+	@media screen and (max-width: $burgerBreakpoint) {
+		min-width: 0;
+		max-width: 800px;
+		padding: 0 10px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+		p {
+	  text-align: center;
     margin-top: 8px;
     font-size: 20px;
     line-height: 1.4;
@@ -99,6 +141,14 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	cursor: pointer;
+
+	@media screen and (max-width: $breakpoint1420) {
+		right: 60%;
+	}
+
+	@media screen and (max-width: $breakpoint768) {
+		right: 60%;
+	}
 }
 
 .swiper-next {
@@ -107,6 +157,13 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	cursor: pointer;
+
+	@media screen and (max-width: $breakpoint1420) {
+		right: 50%;
+	}
+	@media screen and (max-width: $breakpoint768) {
+		right: 40%;
+	}
 } 
 
 .swiper-arrow {
@@ -120,16 +177,28 @@
 	justify-content: center;
 	background-color: #FFFFFF;
 	border-radius: 50%;
+
+	@media screen and (max-width: $breakpoint1420) {
+		top: 100%;
+	}
 }
 
 .bg__cup {
 	position: absolute;
 	top: -400px;
 	left: 0;
+
+	@media screen and (max-width: $breakpoint1420) {
+		display: none;
+	}
 	}
 
 .bg__right-cup {
 	position: absolute;
 	bottom: -300px;
 	right: 0;
+
+	@media screen and (max-width: $breakpoint1420) {
+		display: none;
+	}
 }

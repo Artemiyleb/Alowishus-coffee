@@ -51,7 +51,7 @@
 	@media screen and (max-width: $burgerBreakpoint) {
 		position: absolute;
 		width: 80%;
-		bottom: 20%;
+		bottom: 10%;
 		left: 50%;
 		transform: translate(-50%);
 		display: none;
@@ -178,17 +178,19 @@
         }
 
         &:before {
-            top: 0;
+					right: 10px;
+          top: 0;
         }
 
         &::after {
-            bottom: 0;
+					right: 10px;
+          bottom: 0;
         }
 
         span {
             position: absolute;
             top: 9px;
-            right: 0;
+            right: 10px;
             width: 100%;
             background: $burgerColor;
             height: 2px;
@@ -266,15 +268,9 @@
 	 	}
 
 	p {
-  font-size: 24px;
-  line-height: 1.45;
-  color: $darkGrey;
-	@include adaptiveValue("font-size", 24, 18);
-
 	@media screen and (max-width: $breakpoint480) {
 		text-align: center;
 	}
-
 	}
 }
 

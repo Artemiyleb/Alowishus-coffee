@@ -2,11 +2,24 @@
 
 .footer {
 padding-top: 110px;
+padding-bottom: 0;
+ 
+  @media screen and (max-width: $breakpointContainer) {
+	@include adaptiveValue("padding-top", 110, 20);
+}
 }
 
 .footer-items {
 	display: flex;
 	justify-content: space-between;
+	gap: 40px;
+
+	@media screen and (max-width: $burgerBreakpoint) {
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+		gap: 30px;
+	}
 }
 
 .footer-logo {
@@ -14,33 +27,50 @@ padding-top: 110px;
 	margin: 0;
 
 	img {
+		max-width: 100%;
 		margin-bottom: 40px;
+
+		@media screen and (max-width: $burgerBreakpoint) {
+			margin-bottom: 30px;
+			}
 	}
 
 	p {
-		font-size: 30px;
-    line-height: 1.33;
+		line-height: 1.33;
     color: $darkGrey;
+		@include adaptiv-font(30, 20);
 	}
 }
 .footer-contacts {
 	margin: 0 0 90px 0;
+	@media screen and (max-width: $burgerBreakpoint) {
+		margin: 0 0 30px 0;
+	}
 }
 .footer-header {
 	font-weight: 800;
-  font-size: 40px;
+  @include adaptiv-font(40, 28);
   line-height: 1.25;
   color: $mainColor;
 	margin-bottom: 30px;
+
+	@media screen and (max-width: $burgerBreakpoint) {
+		margin-bottom: 20px;
+	}
 }
+
 .footer-contacts__email {
 	display: flex;
 	align-items: center;
 	gap: 24px;
 	margin-bottom: 30px;
 
+	@media screen and (max-width: $burgerBreakpoint) {
+		margin-bottom: 20px;
+		}
+
 	p {
-		font-size: 30px;
+		@include adaptiv-font(30, 20);
     line-height: 1.64;
     color: $darkGrey;
 	}
@@ -51,18 +81,32 @@ padding-top: 110px;
 	width: 60px;
 	height: 60px;
 	background-color: #fff;
-	border-radius: 50%;
+	border-radius: 100%;
 	justify-content: center;
 	align-items: center;
+	@media screen and (max-width: $burgerBreakpoint) {
+		width: 40px;
+		height: 40px;
+		}
+	@media screen and (max-width: $burgerBreakpoint) {
+	.icon {
+		width: 26px;
+		height: 26px;
+	}
+	}
 }
 .footer-contacts__tel {
 	display: flex;
 	align-items: center;
 	gap: 24px;
 	margin-bottom: 30px;
+
+	@media screen and (max-width: $burgerBreakpoint) {
+		margin-bottom: 20px;
+		}
 	
 	p {
-		font-size: 30px;
+		@include adaptiv-font(30, 20);
     line-height: 1.64;
     color: $darkGrey;
 	}
@@ -78,10 +122,14 @@ padding-top: 110px;
 	max-width: 560px;
 
 	p {
-		font-size: 30px;
+		@include adaptiv-font(30, 20);
 		line-height: 1.33;
 		color: $darkGrey;
 		margin-bottom: 30px;
+
+		@media screen and (max-width: $burgerBreakpoint) {
+		margin-bottom: 20px;
+		}
 	}
 
 	a {
@@ -114,8 +162,13 @@ padding-top: 110px;
 	border-radius: 65px;
   padding: 20px 30px;
 
+	  @media screen and (max-width: $burgerBreakpoint) {
+		  border-radius: 45px;
+      padding: 10px 20px;
+		}
+
 	&::placeholder {
-		font-size: 22px;
+		@include adaptiv-font(22, 18);
     line-height: 1.36;
     color: $darkGrey;
     opacity: 0.7;
@@ -124,6 +177,10 @@ padding-top: 110px;
 
 .form-button {
 	margin-top: 30px;
+
+	@media screen and (max-width: $burgerBreakpoint) {
+		margin-top: 20px;
+	}
 }
 
 .button-form {
@@ -135,11 +192,20 @@ padding-top: 110px;
   line-height: 1.67;
   text-transform: uppercase;
 	color: #fff;
-
+ 
+	  @media screen and (max-width: $burgerBreakpoint) {
+		  padding: 12px 24px;
+	  	border-radius: 63px;
+	    font-size: 15px;
+	}
 }
 
 .footer-subscribe {
 	margin-bottom: 70px;
+
+	@media screen and (max-width: $burgerBreakpoint) {
+		margin-bottom: 30px;
+	}
 }
 
 .footer-bottom {
@@ -147,12 +213,19 @@ padding-top: 110px;
 	display: flex;
 	justify-content: space-between;
 	padding: 40px 0;
+
+	@media screen and (max-width: $burgerBreakpoint) {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+		padding: 20px 0;
+	}
 }
 
 .footer-copyrights {
 
 	p {
-		font-size: 22px;
+		@include adaptiv-font(22, 16);
     line-height: 1.36;
     color: $darkGrey;
 		span {
@@ -166,7 +239,7 @@ padding-top: 110px;
 display: flex;
 	a,
 	p {
-		font-size: 22px;
+		@include adaptiv-font(22, 16);
     line-height: 1.36;
     color: $darkGrey;
 		transition: all ease 0.3s;

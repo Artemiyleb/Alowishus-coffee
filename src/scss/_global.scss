@@ -42,27 +42,19 @@ body {
 
 .title {
 	font-weight: 800;
-  font-size: 64px;
   line-height: 1.09;
 	margin-bottom: 30px;
   color: $mainColor;
-	@include adaptiv-font(64, 30);
-//
-//	@media (max-width: 1200px) {
-//		font-size: 56px;
-//}
-// 
-//@media (max-width: $breakpoint992) {
-//	  font-size: 48px;;
-//}
-//
-//  @media (max-width: $breakpoint480) {
-//	  font-size: 36px;;
-//}
+	font-size: 64px;
+
+	@media screen and (max-width: $breakpointContainer) {
+		@include adaptiv-font(64, 30);
+	}
+	
 }
 
 .sub-title {
-	font-size: 24px;
+	@include adaptiv-font(24, 18);
   line-height: 1.45;
   color: $darkGrey;
 }
