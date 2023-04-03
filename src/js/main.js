@@ -78,3 +78,180 @@ const swiper = new Swiper ('.swiper', {
 		 },
   }
 });
+
+// Scroll
+
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+};
+
+// Animations
+
+// If you need scroll animations just uncomment
+// В случае если нужны анимации при скролле разкомментировать
+
+gsap.registerPlugin(ScrollTrigger)
+// Hero animations (TimeLine example)
+const tl = gsap.timeline()
+tl.fromTo(
+    '.logo',
+    {
+       // y: -50,
+        opacity: 0,
+    },
+    { 
+			opacity: 1, 
+			duration: 1 },
+    0,
+).fromTo(
+    '.menu li',
+    {
+        y: -50,
+        opacity: 0,
+    },
+    { y: 0, opacity: 1, duration: 1, stagger: 0.15 },
+    0.3,
+)
+.fromTo(
+	'.hero-button',
+	{
+		 y: 30,
+		 opacity: 0,
+		 stagger: 0.25
+ },
+ { 
+	 y: 0,
+	 opacity: 1, 
+	 duration: 1 },
+ 0.3,
+)
+
+
+
+// Scroll animation example
+// animation element
+gsap.from('.catalog-img', {
+	scrollTrigger: {
+			trigger: '.catalog', // trigger animation
+			start: "-400 center", // the default values
+			end: "top",
+			scrub: true,
+	},
+	xPercent: -40,
+	duration: 1
+	})
+
+	gsap.from('.catalog-title', {
+		scrollTrigger: {
+				trigger: '.catalog', // trigger animation
+				start: "-800", // the default values
+				end: "100",
+				scrub: true,
+		},
+		y: -100,
+		opacity: 0,
+		duration: 1
+		})
+
+		gsap.from('.catalog-item', {
+			scrollTrigger: {
+					trigger: '.catalog', // trigger animation
+					start: "-800", // the default values
+					end: "center",
+					scrub: true,
+			},
+			yPercent: 100,
+			duration: 1
+			})
+
+			gsap.from('.order-title', {
+				scrollTrigger: {
+						trigger: '.order', // trigger animation
+						start: "-800", // the default values
+						end: "100",
+						scrub: true,
+				},
+				y: -100,
+				opacity: 0,
+				duration: 1
+				})
+
+				gsap.from('.order-img', {
+					scrollTrigger: {
+							trigger: '.order', // trigger animation
+							start: "-1000", // the default values
+							end: "top",
+							scrub: true,
+					},
+					xPercent: -100,
+					opacity: 0.5,
+					duration: 1
+					})
+
+					gsap.from('.bestselling-title', {
+						scrollTrigger: {
+								trigger: '.bestselling', // trigger animation
+								start: "-800", // the default values
+								end: "100",
+								scrub: true,
+						},
+						y: -100,
+						opacity: 0,
+						duration: 1
+						})
+						
+						gsap.from('.bestselling-item__img', {
+							scrollTrigger: {
+									trigger: '.bestselling', // trigger animation
+									start: "-300", // the default values
+									end: "50",
+									scrub: true,
+							},
+							scale: 0.5,
+							duration: 1
+							})
+
+												gsap.from('.app-title', {
+									scrollTrigger: {
+											trigger: '.app', // trigger animation
+											start: "-800", // the default values
+											end: "100",
+											scrub: true,
+									},
+									y: -100,
+									opacity: 0,
+									duration: 1
+									})
+
+									gsap.from('.left-cup', {
+										scrollTrigger: {
+												trigger: '.app', // trigger animation
+												start: "-400 center", // the default values
+												end: "top",
+												scrub: true,
+										},
+										xPercent: -40,
+										duration: 1
+										})
+
+										gsap.from('.app-image__cards', {
+											scrollTrigger: {
+													trigger: '.app', // trigger animation
+													start: "-1000", // the default values
+													end: "top",
+													scrub: true,
+											},
+											xPercent: 100,
+											opacity: 0.5,
+											duration: 1
+											})
+										
