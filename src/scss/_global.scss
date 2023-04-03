@@ -27,6 +27,7 @@
 body {
     font-family: $fontMain;
 		font-weight: 400;
+		background: linear-gradient(173.34deg, #FFFFFF 0%, #FFFFFF 0%, rgba(243, 244, 245, 0.2) 11.74%, #F3F4F5 27.92%, rgba(243, 244, 245, 0) 44.79%, rgba(243, 244, 245, 0.68) 60.42%, #F3F4F5 79.17%, #f0f0f0 100%);
     &.locked {
         overflow: hidden;
     }
@@ -34,10 +35,6 @@ body {
     &.dark {
         background: #242424;
     }
-}
-
-.main__body {
-	background: linear-gradient(173.34deg, #FFFFFF 0%, #FFFFFF 0%, rgba(243, 244, 245, 0.2) 11.74%, #F3F4F5 27.92%, rgba(243, 244, 245, 0) 44.79%, rgba(243, 244, 245, 0.68) 60.42%, #F3F4F5 79.17%, #f0f0f0 100%);
 }
 
 .title {

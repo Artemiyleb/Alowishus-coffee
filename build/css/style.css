@@ -896,6 +896,8 @@ h6 {
 body {
   font-family: "Jost", sans-serif;
   font-weight: 400;
+  background: -o-linear-gradient(276.66deg, #FFFFFF 0%, #FFFFFF 0%, rgba(243, 244, 245, 0.2) 11.74%, #F3F4F5 27.92%, rgba(243, 244, 245, 0) 44.79%, rgba(243, 244, 245, 0.68) 60.42%, #F3F4F5 79.17%, #f0f0f0 100%);
+  background: linear-gradient(173.34deg, #FFFFFF 0%, #FFFFFF 0%, rgba(243, 244, 245, 0.2) 11.74%, #F3F4F5 27.92%, rgba(243, 244, 245, 0) 44.79%, rgba(243, 244, 245, 0.68) 60.42%, #F3F4F5 79.17%, #f0f0f0 100%);
 }
 
 body.locked {
@@ -904,11 +906,6 @@ body.locked {
 
 body.dark {
   background: #242424;
-}
-
-.main__body {
-  background: -o-linear-gradient(276.66deg, #FFFFFF 0%, #FFFFFF 0%, rgba(243, 244, 245, 0.2) 11.74%, #F3F4F5 27.92%, rgba(243, 244, 245, 0) 44.79%, rgba(243, 244, 245, 0.68) 60.42%, #F3F4F5 79.17%, #f0f0f0 100%);
-  background: linear-gradient(173.34deg, #FFFFFF 0%, #FFFFFF 0%, rgba(243, 244, 245, 0.2) 11.74%, #F3F4F5 27.92%, rgba(243, 244, 245, 0) 44.79%, rgba(243, 244, 245, 0.68) 60.42%, #F3F4F5 79.17%, #f0f0f0 100%);
 }
 
 .title {
@@ -1497,15 +1494,15 @@ template {
           justify-content: space-between;
 }
 
-@supports (padding-top: clamp( 1.25rem , -0.8958333333rem  +  10.7291666667vw , 7.6875rem )) {
+@supports (padding-top: clamp( 1.25rem , -0.4166666667rem  +  8.3333333333vw , 6.25rem )) {
   .hero-items {
-    padding-top: clamp( 1.25rem , -0.8958333333rem  +  10.7291666667vw , 7.6875rem );
+    padding-top: clamp( 1.25rem , -0.4166666667rem  +  8.3333333333vw , 6.25rem );
   }
 }
 
-@supports not (padding-top: clamp( 1.25rem , -0.8958333333rem  +  10.7291666667vw , 7.6875rem )) {
+@supports not (padding-top: clamp( 1.25rem , -0.4166666667rem  +  8.3333333333vw , 6.25rem )) {
   .hero-items {
-    padding-top: calc(1.25rem + 6.4375 * (100vw - 20rem) / 60);
+    padding-top: calc(1.25rem + 5 * (100vw - 20rem) / 60);
   }
 }
 
@@ -1514,6 +1511,8 @@ template {
 }
 
 .hero-description h1 {
+  padding: 0;
+  margin: 0;
   position: relative;
   margin-bottom: 30px;
   position: relative;
@@ -2305,10 +2304,6 @@ template {
     left: 270px;
     bottom: 19px;
   }
-
-  .hero-img img {
-    max-width: 500px;
-  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -2727,10 +2722,6 @@ template {
     margin-right: auto;
   }
 
-  .hero-img img {
-    max-width: 400px;
-  }
-
   .hero-button {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -2914,10 +2905,6 @@ template {
 
   .hero-description p {
     text-align: center;
-  }
-
-  .hero-img img {
-    max-width: 280px;
   }
 
   .app {
